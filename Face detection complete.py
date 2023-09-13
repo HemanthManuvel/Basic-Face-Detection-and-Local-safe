@@ -1,7 +1,7 @@
 from random import randint
 import cv2
       
-CASCADE="H:\MINI-PROJECT\Requirements\Face_cascade.xml"
+CASCADE="Face_cascade.xml"
 FACE_CASCADE=cv2.CascadeClassifier(CASCADE)
 
 def detect_faces(image_path,display=True):
@@ -18,5 +18,5 @@ def detect_faces(image_path,display=True):
     if (cv2.waitKey(0) & 0xFF == ord('q')) or (cv2.waitKey(0) & 0xFF == ord('Q')):
         cv2.destroyAllWindows()
 if __name__ == "__main__":
-        path="H:\MINI-PROJECT\INPUT\IMAGES\Dem.jpg"
+        path="Dem.jpg"
         detect_faces(path)
